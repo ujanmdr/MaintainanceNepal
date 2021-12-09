@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (loading) return;
     if (!user) return history.replace("/");
-  }, [user, loading, history]);
+  }, [user, loading]);
 
   return (
     <>
