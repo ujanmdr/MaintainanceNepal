@@ -10,9 +10,11 @@ const Usernavbar = ({ userdata }) => {
       <Link to="/myprofile" className="abs">
         My Profile
       </Link>
+
       <Link to="/addprofile" className="abs">
         Add Profile
       </Link>
+
       <Link to="/" className="abs">
         Return to Homepage
       </Link>

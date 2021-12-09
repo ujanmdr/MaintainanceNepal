@@ -11,6 +11,8 @@ import Dashboard from "./Authentication/Dashboard";
 import Navbar from "./Components/Navbar/Navbar";
 import Myprofile from "./Components/Userdashboard/Myprofile";
 import Addprofile from "./Components/Userdashboard/Addprofile";
+import Editprofile from "./Components/Userdashboard/Editprofile";
+
 const App = () => {
   const Error = () => {
     return (
@@ -60,7 +62,9 @@ const App = () => {
               <Route path="/addprofile">
                 <Addprofile />
               </Route>
-
+              <Route path="/editprofile/:id">
+                <Editprofile />
+              </Route>
               <Route path="">
                 <Error />
               </Route>

@@ -9,6 +9,7 @@ const Register = () => {
 
   const onFileChange = async (e) => {
     const file = e.target.files[0];
+
     const storageRef = app.storage().ref();
     const fileRef = storageRef.child(file.name);
     await fileRef.put(file);
@@ -26,7 +27,7 @@ const Register = () => {
     const user = res.user;
 
     if (!name || !fileUrl || !email || !password) {
-      return;
+      return (fileUrl = "https://clipground.com/images/clipart-profile-6.jpg");
     }
     await db
       .collection("users")

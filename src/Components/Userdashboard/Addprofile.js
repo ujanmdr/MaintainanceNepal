@@ -14,7 +14,7 @@ const Addprofile = () => {
 
   const onFileChange = async (e) => {
     const file = e.target.files[0];
-    const storageRef = app.storage().ref();
+    const storageRef = app.storage("/docs/").ref();
     const fileRef = storageRef.child(file.name);
     await fileRef.put(file);
     setDocsUrl(await fileRef.getDownloadURL());
@@ -26,7 +26,8 @@ const Addprofile = () => {
     const address = e.target.address.value;
     const experience = e.target.experience.value;
     const about = e.target.about.value;
-    if (!phone || !address || !experience || !about || !DocsUrL) {
+    const experties = e.target.experties.value;
+    if (!phone || !address || !experience || !about || !DocsUrL || !experties) {
       return;
     }
     try {
@@ -38,7 +39,7 @@ const Addprofile = () => {
           {
             phone: phone,
             address: address,
-
+            experties: experties,
             experience: experience,
             about: about,
             document: DocsUrL,
@@ -59,12 +60,22 @@ const Addprofile = () => {
   return (
     <div>
       <Usernavbar />
-      {!userdata.phone ? (
+      {!userdata.phone || !userdata.experties || !userdata.address ? (
         <>
           <h2>Add Profile</h2>
           <form onSubmit={onSubmit}>
             <input type="text" name="address" placeholder="address" required />
             <input type="text" name="phone" placeholder="phone" required />
+            <h4>Experties on:</h4>
+            <select name="experties" id="experties" required>
+              <option value="Plumber">Plumber</option>
+              <option value="Kitchen Appliances">Kitchen Appliances</option>
+              <option value="Electronic Appliances">
+                Electronic Appliances
+              </option>
+              <option value="Bike Mechanic">Bike Mechanic</option>
+              <option value="Car Mechanic">Car Mechanic</option>
+            </select>
             <input type="text" name="experience" placeholder="experience" />
             <input
               type="textarea"
@@ -81,7 +92,7 @@ const Addprofile = () => {
               required
               onChange={onFileChange}
             />
-            <button>Add Profile</button>
+            <button type="submit">Add Profile</button>
           </form>
         </>
       ) : (
