@@ -8,19 +8,64 @@ import About from "./Pages/About";
 import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
 import Dashboard from "./Authentication/Dashboard";
-
+import Navbar from "./Components/Navbar/Navbar";
+import Myprofile from "./Components/Userdashboard/Myprofile";
+import Addprofile from "./Components/Userdashboard/Addprofile";
 const App = () => {
+  const Error = () => {
+    return (
+      <>
+        <Navbar />
+        <h1>
+          {" "}
+          <center>Oops!! Page Not Found</center>
+        </h1>
+        ;
+      </>
+    );
+  };
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/resource" component={Resource} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Router>
+            <Switch>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/register">
+                <Register />
+              </Route>
+
+              <Route path="/dashboard">
+                <Dashboard />
+              </Route>
+
+              <Route path="/resource">
+                <Resource />
+              </Route>
+
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/myprofile">
+                <Myprofile />
+              </Route>
+              <Route path="/addprofile">
+                <Addprofile />
+              </Route>
+
+              <Route path="">
+                <Error />
+              </Route>
+            </Switch>
+          </Router>
         </Switch>
       </Router>
     </>

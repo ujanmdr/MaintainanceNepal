@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
-const Userdashboard = ({ image, name }) => {
+
+import Usernavbar from "../Components/Navbar/Usernavbar";
+
+const Userdashboard = ({ userdata }) => {
   return (
     <div>
-      <Link to="/">
-        <h1>Return To Homepage</h1>
-      </Link>
-      <h1>Hello {name}</h1>
-      <img src={image} height="200" width="100" alt="" />
+      <Usernavbar userdata={userdata} />
+
+      <center>
+        <h1>Welcome to Dashboard</h1>
+        <h1>Hello, {userdata.name}</h1>
+        <img src={userdata.image} height="200" width="100" alt="" />
+        <h1>{userdata.email}</h1>
+      </center>
     </div>
   );
 };
