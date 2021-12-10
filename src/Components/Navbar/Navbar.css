@@ -1,10 +1,21 @@
-.navbar {
+.navbar__container {
   font-size: 24px;
   display: flex;
-  justify-content: start;
-  padding: 1%;
-  background-color: cadetblue;
+  height: fit-content;
+  background-color:#61B0b7;
+  padding-bottom: 0.5em;
+  align-items: center;
+  justify-content: center;
+} 
+
+.abs{
+  padding-left: 0.5em;
+  font-family:Franklin Gothic Medium;
+  color: white;
+  text-decoration: none;
 }
-.navbar .abs {
-  padding-right: 2%;
+.abs:hover {
+  text-decoration: underline;
+  transition-timing-function: ease-out;
 }
+
