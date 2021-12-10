@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Link, useHistory } from "react-router-dom";
 import { auth, db, app } from "../firebase";
 import "./Register.css";
+import logoPic from '../Images/login.jpg';
 
 const Register = () => {
   const [fileUrl, setFileUrl] = useState();
@@ -52,13 +53,17 @@ const Register = () => {
   };
   return (
     <>
-      <div className="main">
+    <div className="main">
+      <div className="left">
+      <img className="loginpic" src={logoPic} alt="" ></img>
+      </div>
+      <div className="right" >
         <h1>Register Form</h1>
         <form className="Register_form" onSubmit={onSubmit}>
         <label className="register-name">Full Name</label>
-        <input className="register-input" type="text" name="name" placeholder="full name" required />
+        <input className="register-input" type="text" name="name" placeholder="Enter Full Name" required />
         <label className="register-email">Email</label>
-        <input className="register-input" type="text" name="email" placeholder="email" required />
+        <input className="register-input" type="text" name="email" placeholder="Enter Email Address" required />
         <label className="register-roles">Roles</label>
         <select  name="status" id="status">
           <option value="Viewer">Viewer</option>
@@ -68,7 +73,7 @@ const Register = () => {
         <input className="register-input"
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="Enter Password"
           required
         />
         <input type="file" onChange={onFileChange} required />
@@ -77,6 +82,7 @@ const Register = () => {
           Already have an account? <Link to="/login">Login</Link> now.
         </div>
       </form>
+      </div>
       </div>
     </>
   );
