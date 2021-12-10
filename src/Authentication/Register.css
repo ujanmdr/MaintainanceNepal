@@ -25,6 +25,8 @@
 select{
     font-size: 20px;
     margin-bottom: 15px;
+    width: 90%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Register_form{
@@ -42,7 +44,19 @@ select{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-radius: 4px;
+    width: 350px;
+    border: 0;
+    border-bottom: 2px solid black;
+    outline: 0;
+    color: black;
+    background: transparent;
+    transition:  0.2s;
+}
+
+.register-file{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     width: 350px;
 }
 
@@ -51,5 +65,14 @@ select{
     padding-bottom: 10px;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
+    border: 0px;
+    background-color: gray;
+    color: white;
 }
 
+.register-button:hover{
+    color: black;
+    background-color: turquoise;
+}

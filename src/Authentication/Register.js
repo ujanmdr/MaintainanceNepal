@@ -77,7 +77,7 @@ const Register = () => {
           <option value="Resource">Resource</option>
         </select>
         
-        <input className="register-input" type="file" onChange={onFileChange} required />
+        <input className="register-file" type="file" onChange={onFileChange} required />
         <button className="register-button">Register</button>
         <div>
           <h5>Already have an account? <Link to="/login">Login</Link> now.</h5>

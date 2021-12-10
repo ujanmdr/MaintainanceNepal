@@ -29,7 +29,7 @@ const Login = () => {
   };
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="login-main">
       <div className="login-left">
@@ -37,20 +37,21 @@ const Login = () => {
       </div>
       <div className="login-right">
         <form className="Login_form" onSubmit={() => signInWithEmailAndPassword(email, password)}>
-        <h1>Login Form </h1>
-        <label className="Login_email">Username Email</label>
+        <h1 className="heading-login">The Maintainace Nepal</h1>
+        <h2>Login Page </h2>
+        <label className="Login_email">Email Address</label>
       <input className="Login_input"
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="E-mail Address"
+        placeholder="Enter Email Address"
       />
       <label className="Login_password"> Password</label>
       <input className="Login_input"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
+        placeholder="Enter Password"
       />
       <button className="Login_button" >
         Login
@@ -58,7 +59,7 @@ const Login = () => {
       </form>
 
       <div>
-        Don't have an account? <Link to="/register">Register</Link> now.
+        <h5>Don't have an account? <Link to="/register">Register</Link> now.</h5>
       </div>
       </div>
       </div>
