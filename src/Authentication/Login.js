@@ -4,6 +4,9 @@ import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Loading from "../Misc/Loading";
+import "./Login.css";
+
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,27 +31,29 @@ const Login = () => {
     <>
       <Navbar />
 
-      <input
+      <div className="main">
+        <h1>Login Form </h1>
+        <label className="Login_email">Username Email</label>
+      <input className="Login_input"
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="E-mail Address"
       />
-      <input
+      <label className="Login_password"> Password</label>
+      <input className="Login_input"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button onClick={() => signInWithEmailAndPassword(email, password)}>
+      <button className="Login_button" onClick={() => signInWithEmailAndPassword(email, password)}>
         Login
       </button>
 
       <div>
-        <Link to="/reset">Forgot Password</Link>
-      </div>
-      <div>
         Don't have an account? <Link to="/register">Register</Link> now.
+      </div>
       </div>
     </>
   );

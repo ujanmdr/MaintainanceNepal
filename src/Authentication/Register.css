@@ -1,0 +1,25 @@
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    margin-top:10%;
+    display: flex;
+    flex-direction: column; 
+}
+.Register_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-name,.register-email,.register-roles,.register-password{
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.register-input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
