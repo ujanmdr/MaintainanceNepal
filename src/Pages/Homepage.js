@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 
+
 function Homepage() {
   return (
     <div>
