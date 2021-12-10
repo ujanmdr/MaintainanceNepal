@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Link, useHistory } from "react-router-dom";
 import { auth, db, app } from "../firebase";
 import "./Register.css";
-import logoPic from '../Images/login.jpg';
+import logoPic from '../Images/register.jpg';
 
 const Register = () => {
   const [fileUrl, setFileUrl] = useState();
@@ -53,22 +53,17 @@ const Register = () => {
   };
   return (
     <>
-    <div className="main">
+    <div className="register-main">
       <div className="left">
       <img className="loginpic" src={logoPic} alt="" ></img>
       </div>
       <div className="right" >
-        <h1>Register Form</h1>
+        <h1 className="register-head">Register Form Application</h1>
         <form className="Register_form" onSubmit={onSubmit}>
         <label className="register-name">Full Name</label>
         <input className="register-input" type="text" name="name" placeholder="Enter Full Name" required />
         <label className="register-email">Email</label>
         <input className="register-input" type="text" name="email" placeholder="Enter Email Address" required />
-        <label className="register-roles">Roles</label>
-        <select  name="status" id="status">
-          <option value="Viewer">Viewer</option>
-          <option value="Resource">Resource</option>
-        </select>
         <label className="register-password">Password</label>
         <input className="register-input"
           type="password"
@@ -76,10 +71,16 @@ const Register = () => {
           placeholder="Enter Password"
           required
         />
-        <input type="file" onChange={onFileChange} required />
+        <label className="register-roles">Roles</label>
+        <select  name="status" id="status">
+          <option value="Viewer">Viewer</option>
+          <option value="Resource">Resource</option>
+        </select>
+        
+        <input className="register-input" type="file" onChange={onFileChange} required />
         <button className="register-button">Register</button>
         <div>
-          Already have an account? <Link to="/login">Login</Link> now.
+          <h5>Already have an account? <Link to="/login">Login</Link> now.</h5>
         </div>
       </form>
       </div>

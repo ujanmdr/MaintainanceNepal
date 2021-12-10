@@ -5,7 +5,7 @@ import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Loading from "../Misc/Loading";
 import "./Login.css";
-
+import logoPic from '../Images/login.jpg';
 
 
 const Login = () => {
@@ -31,7 +31,12 @@ const Login = () => {
     <>
       <Navbar />
 
-      <div className="main">
+      <div className="login-main">
+      <div className="login-left">
+      <img className="login-pic" src={logoPic} alt="" ></img>
+      </div>
+      <div className="login-right">
+        <form className="Login_form" onSubmit={() => signInWithEmailAndPassword(email, password)}>
         <h1>Login Form </h1>
         <label className="Login_email">Username Email</label>
       <input className="Login_input"
@@ -47,12 +52,14 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button className="Login_button" onClick={() => signInWithEmailAndPassword(email, password)}>
+      <button className="Login_button" >
         Login
       </button>
+      </form>
 
       <div>
         Don't have an account? <Link to="/register">Register</Link> now.
+      </div>
       </div>
       </div>
     </>
