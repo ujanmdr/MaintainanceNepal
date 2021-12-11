@@ -16,7 +16,7 @@ const About = () => {
       </div>
 
 <h2 style={{textDecoration: "underline",fontFamily:"Frankling Gothic Medium" ,fontSize:"30px",textAlign:"center",paddingBottom:"20px"}}>The Importance Of Home Maintenance</h2>
-<p style={{fontFamily:"Frankling Gothic Medium" ,fontSize:"20px",paddingLeft:"30px",paddingRight:"30px",paddingBottom:"20px"}}>Whether you have recently purchased your home or have been living there for a while, home maintenance is an unavoidable part of owning a property that if you do right, can ensure that your home remains a safe, secure and cared for environment.
+<p style={{fontFamily:"Frankling Gothic Medium" ,fontSize:"20px",paddingLeft:"40px",paddingRight:"40px",paddingBottom:"20px"}}>Whether you have recently purchased your home or have been living there for a while, home maintenance is an unavoidable part of owning a property that if you do right, can ensure that your home remains a safe, secure and cared for environment.
 
 Not only can staying on top of things avoid problems in the long term, but regular maintenance and repairs will provide the opportunity to make minor upgrades that can increase the value of your home, as well as improve on it as a living space.
 
@@ -27,7 +27,7 @@ Maintaining plumbing, heating and other utilities
 Carrying out inspection of the structure of the home
 Maintaining exterior paint, materials and general aesthetics</p>
 
-<p style={{fontFamily:"Frankling Gothic Medium" ,fontSize:"20px",paddingLeft:"30px",paddingRight:"30px"}}>
+<p style={{fontFamily:"Frankling Gothic Medium" ,fontSize:"20px",paddingLeft:"40px",paddingRight:"40px"}}>
 Carrying out maintenance tasks sooner rather than later is important for a number of reasons. Firstly, you will ensure that you are living in a safe and functional home, while saving money in the process. In the long run, the avoidance of home maintenance tasks will mean that problems build up, eventually leading to significant damage or safety hazards in the form of poor structural integrity or ineffective safety features like smoke alarms. Furthermore, these problems will cost a significant amount in comparison to the minimal costs associated with regular maintenance and small repairs.
 
 You will also save time and maintain a flexible schedule if you stay on top of your home maintenance duties. While maintenance is able to be scheduled and worked around due to the non-urgent nature of the repairs, waiting for a problem to become more serious will mean that you have to move your schedule around, in order to take care of it as soon as possible.
